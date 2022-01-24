@@ -29,13 +29,14 @@ function round(playerSelection, computerSelection) {
         }
     }
 
-}function game() {
+}
 
-        const playerChoice = prompt("Rock Paper or Scissors? ");
-        const comChoice = computerPlay();
-        const turn = round(playerChoice, comChoice);
+function game() {
 
-        alert(turn)
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach((button) => button.addEventListener('click', 
+        alert(round(button.id, computerPlay()))));
+
 }
 
 game()
