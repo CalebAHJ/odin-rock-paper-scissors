@@ -30,21 +30,12 @@ function round(playerSelection, computerSelection) {
     }
 
 }function game() {
-    console.log("You will play rock paper scissors vs a computer. (Best 3 out of 5)");
-    let score = 0;
-    for (let i = 1; i < 6; i++) {
-        console.log(`Round ${i}: Rock, Paper, or Scissors? `);
-        const playerChoice = prompt();
+
+        const playerChoice = prompt("Rock Paper or Scissors? ");
         const comChoice = computerPlay();
         const turn = round(playerChoice, comChoice);
 
-        if (turn.charAt(0) === "T") i--;
-        else if (turn.charAt(4) === "W") score++;
-
-        console.log(turn)
-    }
-    if (score < 3) console.log("You Lost! Better luck next time.");
-    else console.log("Congratulations! You Won! ");
+        alert(turn)
 }
 
 game()
