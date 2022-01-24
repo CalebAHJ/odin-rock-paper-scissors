@@ -28,15 +28,13 @@ function round(playerSelection, computerSelection) {
             else return "Tie! Both Scissors";
         }
     }
-
 }
 
 function game() {
 
         const buttons = document.querySelectorAll('button');
         buttons.forEach((button) => button.addEventListener('click', 
-        alert(round(button.id, computerPlay()))));
-
+        () => alert(round(button.id, computerPlay()))));
 }
 
 game()
