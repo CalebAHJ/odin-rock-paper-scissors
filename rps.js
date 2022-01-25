@@ -40,13 +40,13 @@ function round(playerSelection, computerSelection) {
 
         case "scissors": {
             if (computerSelection === "rock") {
-                "You Lose! Rock beats Scissors";
+                msg.textContent = "You Lose! Rock beats Scissors";
             }
             else if (computerSelection === "paper") {
-                "You Win! Scissors beats Paper";
+                msg.textContent = "You Win! Scissors beats Paper";
             }
             else {
-                "Tie! Both Scissors";
+                msg.textContent = "Tie! Both Scissors";
             }
         }
         break;
