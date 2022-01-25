@@ -15,21 +15,23 @@ body {
 
 .top {
     flex-direction: column;
-    flex: 1 1 auto;
+    flex: 1 1 200px;
 }
 
 .buttons {
-    flex: 1 5 auto;
+    flex: 4 1 500px;
     display: flex;
-    justify-content: space-between;
-    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 60%;
 }
 
 button {
-    min-width: 100px;
-    min-height: 100px;
+    height: 60%;
+    width: 80%;
+    padding: 80%;
 }
 
 .score {
-    flex: 1 1 auto;
+    flex: 1 1 100px;
 }
