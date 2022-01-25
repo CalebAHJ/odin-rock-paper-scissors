@@ -9,32 +9,57 @@ function computerPlay() {
 }
 
 function round(playerSelection, computerSelection) {
-    const playerChoice = playerSelection.toLowerCase();
+    const msg = document.getElementById("msg");
 
-    switch (playerChoice) {
+    switch (playerSelection) {
         case "rock": {
-            if (computerSelection === "rock") return "Tie! Both Rock";
-            else if (computerSelection === "paper") return "You Lose! Paper beats Rock";
-            else return "You Win! Rock beats Scissors";
+            if (computerSelection === "rock") {
+                msg.textContent = "Tie! Both Rock";
+            }
+            else if (computerSelection === "paper") {
+                 msg.textContent = "You Lose! Paper beats Rock";
+            }
+            else {
+                msg.textContent = "You Win! Rock beats Scissors";
+            }
         }
+        break;
+
         case "paper": {
-            if (computerSelection === "rock") return "You Win! Paper beats Rock";
-            else if (computerSelection === "paper") return "Tie! Both Paper";
-            else return "You Lose! Scissors beats Paper";
+            if (computerSelection === "rock") {
+                msg.textContent = "You Win! Paper beats Rock";
+            }
+            else if (computerSelection === "paper") {
+                msg.textContent = "Tie! Both Paper";
+            }
+            else {
+                msg.textContent = "You Lose! Scissors beats Paper";
+            }
         }
+        break;
+
         case "scissors": {
-            if (computerSelection === "rock") return "You Lose! Rock beats Scissors";
-            else if (computerSelection === "paper") return "You Win! Scissors beats Paper";
-            else return "Tie! Both Scissors";
+            if (computerSelection === "rock") {
+                "You Lose! Rock beats Scissors";
+            }
+            else if (computerSelection === "paper") {
+                "You Win! Scissors beats Paper";
+            }
+            else {
+                "Tie! Both Scissors";
+            }
         }
+        break;
     }
 }
 
 function game() {
 
-        const buttons = document.querySelectorAll('button');
-        buttons.forEach((button) => button.addEventListener('click', 
-        () => alert(round(button.id, computerPlay()))));
+    let roundCount = 1;
+
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach((button) => button.addEventListener('click', 
+    () => round(button.id, computerPlay())));
 }
 
 game()
