@@ -95,7 +95,12 @@ function isDone() {
     if (pScore === 3) document.getElementById('header').textContent = "Congrats! You Won!";
     else document.getElementById('header').textContent = "Aww! You Lost. ";
 
-    window.addEventListener('click', () => window.location.reload());
+    document.querySelectorAll('button').forEach((button) => button.disabled = true);
+
+    document.getElementById('round').textContent = 
+            "Click the screen and press any key to play again!";
+    document.addEventListener('keydown', () => window.location.reload());
+
 }
 
 function game() {

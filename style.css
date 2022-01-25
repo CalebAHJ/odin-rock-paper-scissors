@@ -39,6 +39,6 @@ button {
     padding: 80%;
 }
 
-.score {
-    flex: 1 1 100px;
+#header {
+    text-align: center;
 }
